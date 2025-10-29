@@ -64,7 +64,7 @@ graph TB
         H[Modul Verifikasi]
         I[Modul Persetujuan]
         J[Modul Pelaporan]
-        K[Database MySQL<br/>Host: 127.0.0.1:3306<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        K[Database MySQL]
     end
     
     A --> F
@@ -92,7 +92,6 @@ graph TB
 - Asumsi konektivitas internet tersedia bagi pengguna
 - Pengguna memiliki pengetahuan dasar dalam penggunaan aplikasi digital
 - Sistem akan digunakan di seluruh wilayah Aceh dengan berbagai kondisi infrastruktur
-- Database MySQL menggunakan kredensial: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
 
 ### 2.4 Keterbatasan (Constraints)
 - Keterbatasan bandwidth di beberapa daerah di Aceh
@@ -346,7 +345,6 @@ graph TB
 
 **NFR-004 - Konektivitas Database**
 - Deskripsi: Koneksi ke database MySQL harus stabil dan cepat
-- Kondisi: Akses database menggunakan kredensial mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
 - Kriteria: Waktu respons database < 500ms
 
 ### 4.2 Kegunaan (Usability Requirements)
@@ -411,7 +409,6 @@ graph TB
 ### 4.6 Portabilitas (Portability Requirements)
 **NFR-016 - Kompatibilitas Database**
 - Deskripsi: Sistem harus berjalan secara efektif di lingkungan MySQL sesuai kredensial yang ditentukan
-- Kondisi: Menggunakan database MySQL dengan host 127.0.0.1, port 3306, username root, password VDkt52xIv7RMuN5u
 - Kriteria: Semua fungsi database berjalan tanpa kesalahan
 
 **NFR-017 - Responsif**
@@ -441,7 +438,7 @@ graph TB
 **EI-004 - MySQL Connection**
 - Deskripsi: Koneksi ke database MySQL dengan kredensial yang ditentukan
 - Format: Koneksi TCP/IP ke server database di 127.0.0.1:3306
-- Standar: Protokol MySQL dengan otentikasi: username root, password VDkt52xIv7RMuN5u
+- Standar: Protokol MySQL 
 
 ### 5.3 Antarmuka API (API Interfaces)
 **EI-005 - REST API**
@@ -522,4 +519,3 @@ graph TB
 - Glossary of Terms
 - Use Case Diagrams
 - User Story Map
-- Database Connection Details: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A

@@ -17,7 +17,7 @@
 Dokumen ini merupakan deskripsi desain perangkat lunak (Software Design Description/SDD) untuk aplikasi SIMUTASI (Sistem Mutasi Pendidikan) yang berada di simutasi.acehapp.com. Tujuan dari dokumen ini adalah memberikan gambaran rinci tentang arsitektur dan desain sistem, termasuk struktur, komponen, antarmuka, dan fungsi-fungsi yang dirancang untuk memenuhi kebutuhan fungsional dan non-fungsional yang telah ditentukan dalam SRS.
 
 ### 1.2 Lingkup (Scope)
-Dokumen ini mencakup desain arsitektur sistem, komponen perangkat lunak, desain data, desain antarmuka, dan pertimbangan implementasi untuk aplikasi SIMUTASI. Ini berfungsi sebagai panduan teknis untuk pengembang dalam mengimplementasikan sistem sesuai dengan spesifikasi kebutuhan dengan koneksi database MySQL menggunakan kredensial: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A.
+Dokumen ini mencakup desain arsitektur sistem, komponen perangkat lunak, desain data, desain antarmuka, dan pertimbangan implementasi untuk aplikasi SIMUTASI. Ini berfungsi sebagai panduan teknis untuk pengembang dalam mengimplementasikan sistem sesuai dengan spesifikasi kebutuhan dengan koneksi database MySQL menggunakan kredensial: -.
 
 ### 1.3 Referensi ke SRS (Reference to SRS)
 - Nama Dokumen: Aplikasi SIMUTASI - Software Requirements Specification
@@ -31,7 +31,7 @@ Dokumen ini mencakup desain arsitektur sistem, komponen perangkat lunak, desain 
 3. ISO/IEC/IEEE 42010 - Systems and software engineering — Architecture description
 4. MySQL 8.0 Documentation
 5. Standar Pengembangan Aplikasi Web
-6. Database Connection: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+6. Database Connection: -
 
 ### 1.5 Ikhtisar (Overview)
 Dokumen ini terstruktur dalam beberapa bagian utama: deskripsi arsitektur keseluruhan, desain komponen, desain data, desain antarmuka, desain proses, dan pertimbangan implementasi.
@@ -44,7 +44,7 @@ Aplikasi SIMUTASI mengadopsi pendekatan arsitektur berbasis layanan (Service-Ori
 - Lapisan Logika Bisnis (Business Logic Layer)
 - Lapisan Data (Data Layer)
 
-Sistem ini menggunakan database MySQL dengan koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A.
+Sistem ini menggunakan database MySQL dengan koneksi: -.
 
 ### 2.2 Diagram Arsitektur (Architecture Diagrams)
 
@@ -75,7 +75,7 @@ graph TB
         M[User Database]
         N[Mutation Database]
         O[Document Storage]
-        P[MySQL Server<br/>Host: 127.0.0.1:3306<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        P[MySQL Server]
     end
     
     A --> C
@@ -145,7 +145,7 @@ classDiagram
 - Modul ini bertanggung jawab untuk otentikasi dan otorisasi pengguna
 - Menggunakan JWT (JSON Web Token) untuk manajemen sesi
 - Mengimplementasikan enkripsi password menggunakan algoritma Bcrypt
-- Terkoneksi ke database MySQL menggunakan: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Terkoneksi ke database MySQL menggunakan: -
 
 ### 3.2 Modul Manajemen Pengguna (User Management Module)
 
@@ -474,7 +474,7 @@ erDiagram
 
 ### 4.3 Model Data Fisik (Physical Data Model)
 - Database: MySQL
-- Connection: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Connection: -
 - Engine: InnoDB
 - Indeks pada kolom yang sering diquery
 - Partisi tabel besar berdasarkan tanggal
@@ -587,7 +587,7 @@ flowchart TD
     A[User Access SIMUTASI Application] --> B{User Authenticated?}
     B -->|No| C[Redirect to Login Page]
     C --> D[User Login Process]
-    D --> E[Validate Credentials with MySQL<br/>mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A]
+    D --> E[Validate Credentials with MySQL<br/>-]
     E --> F{Valid?}
     F -->|Yes| G[Create Session & Token]
     F -->|No| H[Display Error Message]
@@ -625,7 +625,7 @@ sequenceDiagram
     participant D as Document Service
     participant V as Verification Service
     participant App as Approval Service
-    participant DB as MySQL Database<br/>Host: 127.0.0.1:3306<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u
+    participant DB as MySQL Database
     
     U->>B: Akses halaman login
     B->>A: Request login form
@@ -657,7 +657,7 @@ sequenceDiagram
     D-->>A: Return document confirmation
     A-->>B: Return document confirmation
     B-->>U: Tampilkan status upload
-    Note over DB: Data stored in MySQL using<br/>mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+    Note over DB: Data stored in MySQL using<br/>-
 ```
 
 ### 6.3 Diagram Aktivitas (Activity Diagram)
@@ -710,7 +710,7 @@ flowchart
 - Enkripsi data sensitif di database MySQL
 - Validasi input untuk mencegah serangan SQL Injection dan XSS
 - Rate limiting untuk mencegah abuse API
-- Koneksi aman ke database: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Koneksi aman ke database: -
 
 ### 7.2 Desain Skalabilitas (Scalability Design)
 - Arsitektur mikroservis untuk kemudahan scaling
@@ -735,7 +735,7 @@ flowchart
 ### 8.1 Teknologi yang Digunakan (Technology Stack)
 - Backend: PHP/Python/Node.js
 - Frontend: React.js, Vue.js, atau framework HTML5
-- Database: MySQL dengan koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Database: MySQL dengan koneksi: -
 - Web Server: Apache/Nginx
 - File Storage: Sistem file lokal atau cloud storage
 
@@ -755,9 +755,9 @@ flowchart
 - Database Server: MySQL
 - Host: 127.0.0.1
 - Port: 3306
-- Username: root
-- Password: VDkt52xIv7RMuN5u
-- Connection Command: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Username: 
+- Password: 
+- Connection Command: -
 
 ## 9. Pertimbangan Uji Coba (Testing Considerations)
 
@@ -783,4 +783,4 @@ flowchart
 - Spesifikasi API Lengkap
 - Panduan Deployment
 - Dokumentasi Konfigurasi Database MySQL
-- Database Connection Details: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Database Connection Details: -

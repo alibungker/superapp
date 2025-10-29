@@ -6,7 +6,7 @@
 **Standar Referensi:** IEEE 1016-2009
 
 **Tanggal Pembuatan:** 29 Oktober 2025
-**Penulis:** Sistem Arsitek
+**Penulis:** Muhammad Ali Murtaza
 **Versi:** 1.0
 
 ---

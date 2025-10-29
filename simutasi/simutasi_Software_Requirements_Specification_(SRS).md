@@ -6,7 +6,7 @@
 **Standar Referensi:** ISO/IEC/IEEE 29148:2018
 
 **Tanggal Pembuatan:** 29 Oktober 2025
-**Penulis:** Sistem Analis
+**Penulis:** Muhammad Ali Murtaza
 **Versi:** 1.0
 
 ---

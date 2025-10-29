@@ -62,7 +62,7 @@ Model data konseptual menyediakan representasi tingkat tinggi dari entitas data 
 ### 2.3 Diagram Entitas Relasi (Entity Relationship Diagram)
 
 ```mermaid
-erDiagram
+Diagram
     USER {
         string user_id PK
         string name

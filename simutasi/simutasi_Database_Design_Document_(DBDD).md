@@ -6,7 +6,7 @@
 **Standar Referensi:** IEEE 1016 + ISO/IEC/IEEE 42010
 
 **Tanggal Pembuatan:** 29 Oktober 2025
-**Penulis:** Database Arsitek
+**Penulis:** Muhammad Ali Murtaza
 **Versi:** 1.0
 
 ---

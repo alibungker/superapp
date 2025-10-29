@@ -6,7 +6,7 @@
 **Standar Referensi:** ISO/IEC/IEEE 42010 + TOGAF ADM (Phase C)
 
 **Tanggal Pembuatan:** 29 Oktober 2025
-**Penulis:** Arsitek Data
+**Penulis:** Muhammad Ali Murtaza
 **Versi:** 1.0
 
 ---
@@ -14,7 +14,7 @@
 ## 1. Tujuan dan Lingkup (Purpose and Scope)
 
 ### 1.1 Tujuan (Purpose)
-Dokumen ini menyediakan deskripsi komprehensif dari arsitektur data untuk aplikasi SIMUTASI (Sistem Mutasi Pendidikan) yang berada di simutasi.acehapp.com, sesuai dengan standar ISO/IEC/IEEE 42010 dan metodologi TOGAF ADM (Phase C - Information Systems Architecture). Tujuan utamanya adalah untuk mendefinisikan struktur data, aliran data, integrasi data, dan tata kelola data yang akan mendukung kebutuhan bisnis aplikasi ini dengan koneksi database menggunakan: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A.
+Dokumen ini menyediakan deskripsi komprehensif dari arsitektur data untuk aplikasi SIMUTASI (Sistem Mutasi Pendidikan) yang berada di simutasi.acehapp.com, sesuai dengan standar ISO/IEC/IEEE 42010 dan metodologi TOGAF ADM (Phase C - Information Systems Architecture). Tujuan utamanya adalah untuk mendefinisikan struktur data, aliran data, integrasi data, dan tata kelola data yang akan mendukung kebutuhan bisnis aplikasi ini dengan koneksi database menggunakan: **.
 
 ### 1.2 Lingkup (Scope)
 Arsitektur data mencakup:
@@ -24,7 +24,7 @@ Arsitektur data mencakup:
 - Manajemen metadata dan data induk
 - Kebijakan tata kelola data
 - Aspek keamanan dan kepatuhan data
-- Database MySQL dengan koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Database MySQL dengan koneksi: **
 
 ### 1.3 Definisi, Akronim, dan Singkatan
 - **DAD:** Data Architecture Document
@@ -37,7 +37,7 @@ Arsitektur data mencakup:
 - **TOGAF:** The Open Group Architecture Framework
 - **ISO/IEC/IEEE 42010:** Standar untuk deskripsi arsitektur sistem dan perangkat lunak
 - **MySQL:** Sistem manajemen basis data relasional open-source
-- **Database Connection:** mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Database Connection:** **
 
 ### 1.4 Referensi
 1. ISO/IEC/IEEE 42010 - Systems and software engineering — Architecture description
@@ -47,7 +47,7 @@ Arsitektur data mencakup:
 5. Aplikasi SIMUTASI - Software Design Description
 6. Aplikasi SIMUTASI - Database Design Document
 7. MySQL 8.0 Documentation
-8. Database Connection: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+8. Database Connection: **
 
 ## 2. Gambaran Umum Arsitektur Data (Data Architecture Overview)
 
@@ -57,7 +57,7 @@ Arsitektur data dirancang untuk mendukung sistem mutasi pendidikan yang skalabel
 - Konsistensi data lintas modul aplikasi
 - Privasi dan keamanan data pendidikan
 - Integrasi dengan sistem eksternal pendidikan
-- Penggunaan database MySQL dengan koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Penggunaan database MySQL dengan koneksi: **
 
 ### 2.2 Prinsip Arsitektur Data (Data Architecture Principles)
 1. **Data sebagai Aset:** Perlakukan data sebagai aset strategis organisasi
@@ -86,7 +86,7 @@ graph TB
     end
     
     subgraph "Data Storage Layer"
-        H[MySQL Database<br/>Host: 127.0.0.1:3306<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        H[MySQL Database]
         I[File Storage]
         J[Cache Layer]
     end
@@ -176,7 +176,7 @@ graph TB
 - **Frekuensi Pembaruan:** Real-time
 
 ### 3.2 Sumber Data Internal (Internal Data Sources)
-- **Database Operasional:** MySQL dengan koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Database Operasional:** MySQL dengan koneksi: **
 - **Penyimpanan File:** Sistem penyimpanan objek untuk dokumen pendukung
 - **Cache:** Redis untuk data yang sering diakses
 - **Log Sistem:** Data operasional dan audit
@@ -208,7 +208,7 @@ graph LR
     
     subgraph "Sistem Inti SIMUTASI"
         H[Aplikasi SIMUTASI]
-        I[MySQL Database<br/>Host: 127.0.0.1:3306<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        I[MySQL]
         J[Layanan Analitik]
     end
     
@@ -244,7 +244,7 @@ graph LR
 - **Jenis:** Koneksi langsung ke MySQL
 - **Deskripsi:** Integrasi langsung dengan database utama
 - **Protokol:** MySQL Protocol
-- **Koneksi:** mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Koneksi:** **
 - **Frequensi:** Continuous
 
 #### 4.2.3 File Integration
@@ -274,7 +274,7 @@ graph LR
 - Tipe data dan batasan
 - Indeks dan kinerja
 - Sejarah perubahan skema
-- Koneksi database: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Koneksi database: **
 
 #### 5.1.3 Metadata Operasional (Operational Metadata)
 - Waktu pemrosesan data
@@ -313,7 +313,7 @@ Pendidikan Aceh
 - **Supporting Document:** Dokumen pendukung untuk permintaan mutasi
 - **Verification Status:** Status proses verifikasi dokumen atau data
 - **Approval Decision:** Keputusan akhir terkait permintaan mutasi
-- **Database Connection:** mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Database Connection:** **
 
 ## 6. Tata Kelola Data (Data Governance)
 
@@ -328,13 +328,13 @@ Pendidikan Aceh
 - **Tanggung Jawab:** Mengelola kualitas dan integritas data
 - **Peran:** Tim IT Dinas Pendidikan
 - **Akses:** Akses manajemen data
-- **Koneksi Database:** mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Koneksi Database:** **
 
 #### 6.1.3 Data Custodian
 - **Tanggung Jawab:** Operasionalisasi sistem data
 - **Peran:** Tim teknis dan pengembangan
 - **Akses:** Akses teknis dan administratif
-- **Koneksi Database:** mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Koneksi Database:** **
 
 #### 6.1.4 Data Consumer
 - **Tanggung Jawab:** Menggunakan data sesuai kebijakan
@@ -346,7 +346,7 @@ Pendidikan Aceh
 2. **Kebijakan Kualitas:** Standar kualitas data dan prosedur pemeliharaan
 3. **Kebijakan Keamanan:** Perlindungan data dari akses tidak sah
 4. **Kebijakan Retensi:** Masa simpan data dan prosedur penghapusan
-5. **Kebijakan Koneksi Database:** mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+5. **Kebijakan Koneksi Database:** **
 
 ### 6.3 Kualitas Data (Data Quality)
 #### 6.3.1 Dimensi Kualitas
@@ -374,7 +374,7 @@ Pendidikan Aceh
 - **A.14.2 - Security in Development and Support Processes:** Keamanan dalam pengembangan
 
 #### 7.1.2 Perlindungan Database (Database Protection)
-- **Koneksi:** mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Koneksi:** **
 - **Enkripsi Koneksi:** SSL/TLS untuk koneksi ke MySQL
 - **Otorisasi:** Hak akses berbasis peran
 - **Audit:** Logging aktivitas database
@@ -410,7 +410,7 @@ Pendidikan Aceh
 ```mermaid
 graph TD
     A[Data Creation - Pengajuan Mutasi] --> B[Data Validation]
-    B --> C[Data Storage in MySQL<br/>mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A]
+    B --> C[Data Storage in MySQL<br/>**]
     C --> D[Data Processing - Verifikasi dan Persetujuan]
     D --> E[Data Usage - Akses dan Laporan]
     E --> F{Still Valid & Active?}
@@ -430,7 +430,7 @@ graph TD
 - **Sumber:** Input pengguna, integrasi sistem
 - **Validasi:** Validasi format dan isi data
 - **Dokumentasi:** Metadata awal dibuat
-- **Database:** Data disimpan di MySQL dengan koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Database:** Data disimpan di MySQL dengan koneksi: **
 
 #### 8.2.2 Pengolahan Data (Data Processing)
 - **Transformasi:** Pembersihan dan normalisasi data mutasi
@@ -439,7 +439,7 @@ graph TD
 
 #### 8.2.3 Penyimpanan Data (Data Storage)
 - **Database Operasional:** MySQL sebagai database utama
-- **Koneksi:** mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Koneksi:** **
 - **File Storage:** Dokumen pendukung disimpan di sistem file
 
 #### 8.2.4 Pemeliharaan Data (Data Maintenance)
@@ -461,7 +461,7 @@ graph TD
 - **Audit Trail:** Catatan lengkap perubahan status mutasi
 - **Snapshot:** Backup berkala untuk data penting
 - **Recovery Point:** Titik pemulihan data maksimal 1 jam
-- **Database:** Menggunakan MySQL dengan koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- **Database:** Menggunakan MySQL dengan koneksi: **
 
 ## 9. Diagram Arsitektur Data (Data Architecture Diagrams)
 
@@ -492,7 +492,7 @@ graph TB
     end
     
     subgraph "Data Storage Layer"
-        N[MySQL Database<br/>Host: 127.0.0.1:3306<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        N[MySQL Database]
         O[File Storage]
         P[Cache Layer]
         Q[Search Index]
@@ -533,7 +533,7 @@ graph LR
     subgraph "Lingkungan Produksi SIMUTASI"
         A[Load Balancer]
         B[Application Server]
-        C[MySQL Primary<br/>Host: 127.0.0.1:3306<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        C[MySQL]
         D[MySQL Replica]
         E[File Storage Server]
         F[Cache Server]
@@ -571,7 +571,7 @@ graph LR
 ```mermaid
 flowchart LR
     A[Pengguna Membuat Permintaan Mutasi] --> B[Validasi Data Pengguna dan Permintaan]
-    B --> C[Simpan ke Database MySQL<br/>mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A]
+    B --> C[Simpan ke Database MySQL<br/>**]
     C --> D[Pemicu Workflow Mutasi]
     D --> E[Update Cache]
     E --> F[Kirim Notifikasi ke Verifikator]
@@ -590,7 +590,7 @@ flowchart LR
 ## 10. Rencana Implementasi (Implementation Plan)
 
 ### 10.1 Tahapan Implementasi (Implementation Phases)
-1. **Fase 1:** Persiapan infrastruktur dan skema dasar MySQL (Koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A)
+1. **Fase 1:** Persiapan infrastruktur dan skema dasar MySQL (Koneksi: **)
 2. **Fase 2:** Implementasi layanan inti (otentikasi, pengguna)
 3. **Fase 3:** Implementasi modul sekolah dan data induk
 4. **Fase 4:** Implementasi modul mutasi dan workflow
@@ -601,7 +601,7 @@ flowchart LR
 ### 10.2 Kriteria Sukses (Success Criteria)
 - Ketersediaan data 99.9%
 - Waktu respons database MySQL < 500ms
-- Keamanan data terjamin (koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A)
+- Keamanan data terjamin (koneksi: **)
 - Kepatuhan terhadap regulasi
 - Skalabilitas untuk 50.000+ pengguna
 - Integrasi lancar dengan sistem eksternal
@@ -614,7 +614,7 @@ flowchart LR
 - Panduan migrasi data
 - Prosedur pemulihan bencana
 - Template dokumentasi data
-- Konfigurasi database: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Konfigurasi database: **
 
 ## Ringkasan Standar ISO/IEEE dan Tujuan
 
@@ -624,4 +624,4 @@ flowchart LR
 | IEEE 1016-2009 | Praktik yang direkomendasikan untuk deskripsi desain perangkat lunak |
 | ISO/IEC/IEEE 42010 | Standar untuk deskripsi arsitektur sistem dan perangkat lunak |
 | TOGAF ADM | Metodologi untuk perencanaan dan pengembangan arsitektur perusahaan |
-| Database Connection | mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A |
+| Database Connection | ** |

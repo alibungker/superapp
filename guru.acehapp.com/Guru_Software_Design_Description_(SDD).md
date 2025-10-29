@@ -292,82 +292,84 @@ classDiagram
 ### 4.1 Model Data Konseptual (Conceptual Data Model)
 
 ```mermaid
-erDiagram
-    USER {
-        string user_id PK
-        string name
-        string email
-        string password_hash
-        string nip
-        string school
-        string role
-        datetime created_date
-        datetime last_login
+classDiagram
+    class USER {
+        +string user_id PK
+        +string name
+        +string email
+        +string password_hash
+        +string nip
+        +string school
+        +string role
+        +datetime created_date
+        +datetime last_login
     }
-    
-    CLASS {
-        string class_id PK
-        string class_name
-        string subject
-        string grade_level
-        string teacher_id FK
-        datetime created_date
+
+    class CLASS {
+        +string class_id PK
+        +string class_name
+        +string subject
+        +string grade_level
+        +string teacher_id FK
+        +datetime created_date
     }
-    
-    STUDENT {
-        string student_id PK
-        string name
-        string nis
-        string class_id FK
-        string parents_contact
+
+    class STUDENT {
+        +string student_id PK
+        +string name
+        +string nis
+        +string class_id FK
+        +string parents_contact
     }
-    
-    MATERIAL {
-        string material_id PK
-        string title
-        string description
-        string file_url
-        string class_id FK
-        string teacher_id FK
-        datetime upload_date
-        string file_type
-        number size
+
+    class MATERIAL {
+        +string material_id PK
+        +string title
+        +string description
+        +string file_url
+        +string class_id FK
+        +string teacher_id FK
+        +datetime upload_date
+        +string file_type
+        +number size
     }
-    
-    ANNOUNCEMENT {
-        string announcement_id PK
-        string title
-        string content
-        string sender_id FK
-        string class_id FK
-        datetime send_date
-        string priority
+
+    class ANNOUNCEMENT {
+        +string announcement_id PK
+        +string title
+        +string content
+        +string sender_id FK
+        +string class_id FK
+        +datetime send_date
+        +string priority
     }
-    
-    ASSESSMENT {
-        string assessment_id PK
-        string title
-        string class_id FK
-        string teacher_id FK
-        datetime due_date
-        number max_score
+
+    class ASSESSMENT {
+        +string assessment_id PK
+        +string title
+        +string class_id FK
+        +string teacher_id FK
+        +datetime due_date
+        +number max_score
     }
-    
-    GRADE {
-        string grade_id PK
-        string student_id FK
-        string assessment_id FK
-        number score
-        datetime recorded_date
+
+    class GRADE {
+        +string grade_id PK
+        +string student_id FK
+        +string assessment_id FK
+        +number score
+        +datetime recorded_date
     }
-    
-    USER ||--o{ CLASS : teaches
-    CLASS ||--o{ STUDENT : contains
-    CLASS ||--o{ MATERIAL : has
-    CLASS ||--o{ ANNOUNCEMENT : receives
-    CLASS ||--o{ ASSESSMENT : includes
-    STUDENT ||--o{ GRADE : receives
-    ASSESSMENT ||--o{ GRADE : evaluates
+
+    %% Relationships
+    USER "1" --> "many" CLASS : teaches
+    CLASS "1" --> "many" STUDENT : contains
+    CLASS "1" --> "many" MATERIAL : has
+    CLASS "1" --> "many" ANNOUNCEMENT : receives
+    CLASS "1" --> "many" ASSESSMENT : includes
+    STUDENT "1" --> "many" GRADE : receives
+    ASSESSMENT "1" --> "many" GRADE : evaluates
+
 ```
 
 ### 4.2 Model Data Logis (Logical Data Model)

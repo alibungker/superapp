@@ -14,10 +14,10 @@
 ## 1. Pendahuluan dan Lingkup (Introduction and Scope)
 
 ### 1.1 Tujuan Dokumen (Document Purpose)
-Dokumen ini menyediakan desain database komprehensif untuk aplikasi SIMUTASI (Sistem Mutasi Pendidikan) yang berada di simutasi.acehapp.com, sesuai dengan standar IEEE 1016 dan ISO/IEC/IEEE 42010. Tujuan utama adalah untuk mendokumentasikan arsitektur data, struktur tabel, hubungan antar entitas, dan strategi manajemen data untuk mendukung kebutuhan fungsional dan non-fungsional dari sistem dengan koneksi database menggunakan: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A.
+Dokumen ini menyediakan desain database komprehensif untuk aplikasi SIMUTASI (Sistem Mutasi Pendidikan) yang berada di simutasi.acehapp.com, sesuai dengan standar IEEE 1016 dan ISO/IEC/IEEE 42010. Tujuan utama adalah untuk mendokumentasikan arsitektur data, struktur tabel, hubungan antar entitas, dan strategi manajemen data untuk mendukung kebutuhan fungsional dan non-fungsional dari sistem dengan koneksi database menggunakan: -.
 
 ### 1.2 Lingkup Sistem (System Scope)
-Database ini akan mendukung semua aspek operasional aplikasi SIMUTASI termasuk pengelolaan pengguna, proses mutasi pendidikan, manajemen dokumen pendukung, verifikasi data, dan pelaporan status mutasi. Database menggunakan MySQL dengan koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A.
+Database ini akan mendukung semua aspek operasional aplikasi SIMUTASI termasuk pengelolaan pengguna, proses mutasi pendidikan, manajemen dokumen pendukung, verifikasi data, dan pelaporan status mutasi. Database menggunakan MySQL dengan koneksi: -.
 
 ### 1.3 Definisi, Akronim, dan Singkatan
 - **DBMS:** Database Management System
@@ -38,7 +38,7 @@ Database ini akan mendukung semua aspek operasional aplikasi SIMUTASI termasuk p
 4. Database Design for Mere Mortals by Michael J. Hernandez
 5. Aplikasi SIMUTASI - Software Requirements Specification
 6. Aplikasi SIMUTASI - Software Design Description
-7. Database Connection: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+7. Database Connection: -
 
 ## 2. Model Data Konseptual (Conceptual Data Model)
 
@@ -280,7 +280,7 @@ erDiagram
 - Database Management System: MySQL
 - Nama Database: simutasi_db
 - Skema Utama: public 
-- Koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Koneksi: -
 - Engine: InnoDB
 
 ### 4.2 Skrip Pembuatan Tabel (Table Creation Scripts)
@@ -528,7 +528,7 @@ DELIMITER ;
 ### 6.2 Keamanan Data (Data Security)
 - Enkripsi kolom sensitif seperti password dengan algoritma bcrypt
 - Pembatasan akses berbasis peran (RBAC) di tingkat aplikasi
-- Koneksi database: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Koneksi database: -
 - Audit trail untuk operasi penting pada data
 
 ### 6.3 Backup dan Restorasi (Backup and Recovery)
@@ -544,7 +544,7 @@ DELIMITER ;
 graph TD
     A[Pengguna Sistem] --> B[Antarmuka Aplikasi]
     B --> C[API Backend]
-    C --> D[MySQL Database<br/>mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A]
+    C --> D[MySQL Database<br/>-]
     D --> E[Proses Validasi]
     E --> F[Penyimpanan Data]
     F --> G[Laporan dan Analisis]
@@ -594,4 +594,4 @@ CREATE TABLE activity_logs (
 - Contoh Query Umum
 - Panduan Administrasi Database
 - Prosedur Backup dan Pemulihan
-- Dokumentasi Koneksi: mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+- Dokumentasi Koneksi: -

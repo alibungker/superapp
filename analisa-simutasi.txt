@@ -1,0 +1,85 @@
+You are an experienced System Analyst and Software Architect specializing in ISO/IEC and IEEE documentation standards.
+
+Analyze the web application available at:
+folder /home/acehapp-simutasi/htdocs/simutasi.acehapp.com/
+
+for access mysql
+mysql -h'127.0.0.1' -P'3306' -u'root' -p'VDkt52xIv7RMuN5u' -A
+Your task:
+Perform a **complete system documentation and analysis** according to international standards (ISO/IEC and IEEE). The result must include the following four documents, each fully structured and professionally written.
+
+====================================================================
+🧩 1. SOFTWARE REQUIREMENTS SPECIFICATION (SRS)
+Standard Reference: ISO/IEC/IEEE 29148:2018
+
+Include:
+- Introduction (Purpose, Scope, Definitions, References)
+- Overall Description (System context, users, functions, constraints)
+- Functional Requirements (each feature with ID, description, input/output, pre/post conditions)
+- Non-Functional Requirements (performance, usability, security, reliability, maintainability, portability)
+- External Interface Requirements (UI, API, Hardware, Network)
+- Traceability Matrix and Acceptance Criteria
+
+====================================================================
+⚙️ 2. SOFTWARE DESIGN DESCRIPTION (SDD)
+Standard Reference: IEEE 1016-2009
+
+Include:
+- Introduction (Purpose, scope, reference to SRS)
+- Architectural Overview (diagrams: C4 model, UML)
+- Component Design (modules, logic, data flow)
+- Data Design (link to database schema)
+- Interface Design (API endpoints, UI components)
+- Process Design (flowcharts, sequence diagrams)
+- Non-Functional Design (security, scalability, maintainability)
+- Implementation Considerations (tech stack, libraries)
+- Testing Interface considerations
+
+====================================================================
+🗃️ 3. DATABASE DESIGN DOCUMENT (DBDD)
+Standard Reference: IEEE 1016 + ISO/IEC/IEEE 42010
+
+Include:
+- Introduction and Scope
+- Conceptual Data Model (high-level ERD)
+- Logical Data Model (detailed ERD with attributes and keys)
+- Physical Data Model (actual table schema, index, storage)
+- Data Dictionary (table with field name, type, key, nullable, description)
+- Data Integrity and Security
+- Data Flow Diagram (DFD)
+- Backup, migration, and versioning plan
+
+====================================================================
+🏗️ 4. DATA ARCHITECTURE DOCUMENT (DAD)
+Standard Reference: ISO/IEC/IEEE 42010 + TOGAF ADM (Phase C)
+
+Include:
+- Purpose and Scope
+- Enterprise Data Architecture overview
+- Data Domains and Sources
+- Data Integration Map (between subsystems and external APIs)
+- Metadata and Master Data Management
+- Data Governance (roles, ownership, policies)
+- Security and Compliance (ISO/IEC 27001 controls)
+- Data Flow and Lifecycle (collection, transformation, storage, disposal)
+- Diagram: Logical and Physical Data Architecture (showing layers: presentation, application, data, integration)
+
+====================================================================
+📘 Additional Notes:
+- Write in Bahasa Indonesia.
+- Output each document with clear section headings (use Markdown format).
+- Include all relevant diagrams as text-based placeholders (e.g., `[Insert C4 Diagram Here]`).
+- Follow formal ISO/IEEE writing tone, but stay readable.
+- Where actual code or data is unavailable, infer and note assumptions clearly.
+- Highlight any missing components or recommended improvements for modernization, scalability, and compliance.
+- untuk diagram dalam format mermaid dan pastikan jagan error.
+- Save Dalam Folder simutasi
+====================================================================
+Output format:
+# 1.akks_Software_Requirements_Specification_(SRS).md
+# 2.akks_Software_Design_Description_(SDD).md
+# 3.akks_Database_Design_Document_(DBDD).md
+# 4.akks_Data_Architecture_Document(DAD).md
+
+End with a short summary table mapping each ISO/IEEE standard used and its purpose.
+====================================================================

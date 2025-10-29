@@ -62,8 +62,8 @@ Model data konseptual menyediakan representasi tingkat tinggi dari entitas data 
 ### 2.3 Diagram Entitas Relasi (Entity Relationship Diagram)
 
 ```mermaid
-Diagram
-    USER {
+classDiagram
+    class USER {
         string user_id PK
         string name
         string email UK
@@ -76,7 +76,7 @@ Diagram
         boolean is_active
     }
     
-    CLASS {
+    class CLASS {
         string class_id PK
         string class_name
         string subject
@@ -86,7 +86,7 @@ Diagram
         boolean is_active
     }
     
-    STUDENT {
+    class STUDENT {
         string student_id PK
         string name
         string nis
@@ -96,7 +96,7 @@ Diagram
         boolean is_active
     }
     
-    MATERIAL {
+    class MATERIAL {
         string material_id PK
         string title
         string description
@@ -109,7 +109,7 @@ Diagram
         boolean is_published
     }
     
-    ANNOUNCEMENT {
+    class ANNOUNCEMENT {
         string announcement_id PK
         string title
         string content
@@ -120,7 +120,7 @@ Diagram
         boolean is_active
     }
     
-    ASSESSMENT {
+    class ASSESSMENT {
         string assessment_id PK
         string title
         string description
@@ -132,7 +132,7 @@ Diagram
         boolean is_published
     }
     
-    GRADE {
+    class GRADE {
         string grade_id PK
         string student_id FK
         string assessment_id FK
@@ -142,7 +142,7 @@ Diagram
         string parent_comment
     }
     
-    ATTENDANCE {
+    class ATTENDANCE {
         string attendance_id PK
         string student_id FK
         string class_id FK
@@ -152,7 +152,7 @@ Diagram
         string notes
     }
     
-    DISCUSSION {
+    class DISCUSSION {
         string discussion_id PK
         string title
         string description
@@ -163,7 +163,7 @@ Diagram
         boolean is_active
     }
     
-    POST {
+    class POST {
         string post_id PK
         string content
         string author_id FK
@@ -173,21 +173,21 @@ Diagram
         boolean is_approved
     }
     
-    USER ||--o{ CLASS : creates
-    USER ||--o{ ANNOUNCEMENT : sends
-    USER ||--o{ MATERIAL : uploads
-    USER ||--o{ ASSESSMENT : creates
-    CLASS ||--o{ STUDENT : contains
-    CLASS ||--o{ MATERIAL : has
-    CLASS ||--o{ ANNOUNCEMENT : receives
-    CLASS ||--o{ ASSESSMENT : includes
-    CLASS ||--o{ ATTENDANCE : records
-    CLASS ||--o{ DISCUSSION : hosts
-    STUDENT ||--o{ GRADE : receives
-    STUDENT ||--o{ ATTENDANCE : for
-    ASSESSMENT ||--o{ GRADE : evaluates
-    DISCUSSION ||--o{ POST : contains
-    POST ||--o| POST : replies_to
+    USER --> CLASS : creates
+    USER --> ANNOUNCEMENT : sends
+    USER --> MATERIAL : uploads
+    USER --> ASSESSMENT : creates
+    CLASS --> STUDENT : contains
+    CLASS --> MATERIAL : has
+    CLASS --> ANNOUNCEMENT : receives
+    CLASS --> ASSESSMENT : includes
+    CLASS --> ATTENDANCE : records
+    CLASS --> DISCUSSION : hosts
+    STUDENT --> GRADE : receives
+    STUDENT --> ATTENDANCE : for
+    ASSESSMENT --> GRADE : evaluates
+    DISCUSSION --> POST : contains
+    POST --> POST : replies_to
 ```
 
 ## 3. Model Data Logis (Logical Data Model)

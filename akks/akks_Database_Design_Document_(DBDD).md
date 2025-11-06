@@ -298,7 +298,7 @@ erDiagram
 - Database Management System: MySQL
 - Nama Database: akks_db
 - Skema Utama: public 
-- Kredensial: Username - root, Password - VDkt52xIv7RMuN5u
+- Kredensial: Username - root, Password -
 - Engine: InnoDB
 
 ### 4.2 Skrip Pembuatan Tabel (Table Creation Scripts)
@@ -527,7 +527,7 @@ DELIMITER ;
 ### 6.2 Keamanan Data (Data Security)
 - Enkripsi kolom sensitif seperti password dengan algoritma bcrypt
 - Pembatasan akses berbasis peran (RBAC) di tingkat aplikasi
-- Koneksi database menggunakan kredensial: username root, password VDkt52xIv7RMuN5u
+- Koneksi database menggunakan kredensial: username root, password
 - Audit trail untuk operasi penting pada data
 
 ### 6.3 Backup dan Restorasi (Backup and Recovery)
@@ -543,7 +543,7 @@ DELIMITER ;
 graph TD
     A[Pengguna Sistem] --> B[Antarmuka Aplikasi]
     B --> C[API Backend]
-    C --> D[MySQL Database<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+    C --> D[MySQL Database<br/>User: root<br/>Pass:
     D --> E[Proses Validasi]
     E --> F[Penyimpanan Data]
     F --> G[Laporan dan Analisis]
@@ -593,4 +593,4 @@ CREATE TABLE activity_logs (
 - Contoh Query Umum
 - Panduan Administrasi Database
 - Prosedur Backup dan Pemulihan
-- Dokumentasi Koneksi: Host=localhost, Port=3306, User=root, Password=VDkt52xIv7RMuN5u
+- Dokumentasi Koneksi: Host=localhost, Port=3306, User=root, Password=

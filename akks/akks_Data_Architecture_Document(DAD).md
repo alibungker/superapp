@@ -403,7 +403,7 @@ graph TD
 - **Sumber:** Input pengguna, integrasi sistem
 - **Validasi:** Validasi format dan isi data
 - **Dokumentasi:** Metadata awal dibuat
-- **Database:** Data disimpan di MySQL dengan kredensial: username root, password VDkt52xIv7RMuN5u
+- **Database:** Data disimpan di MySQL dengan kredensial: username root, password 
 
 #### 8.2.2 Pengolahan Data (Data Processing)
 - **Transformasi:** Pembersihan dan normalisasi data
@@ -412,7 +412,7 @@ graph TD
 
 #### 8.2.3 Penyimpanan Data (Data Storage)
 - **Database Operasional:** MySQL sebagai database utama
-- **Kredensial:** Username root, password VDkt52xIv7RMuN5u
+- **Kredensial:** Username root, password 
 - **File Storage:** Dokumen pendukung disimpan di sistem file
 
 #### 8.2.4 Pemeliharaan Data (Data Maintenance)

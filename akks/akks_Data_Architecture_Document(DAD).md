@@ -24,7 +24,7 @@ Arsitektur data mencakup:
 - Manajemen metadata dan data induk
 - Kebijakan tata kelola data
 - Aspek keamanan dan kepatuhan data
-- Database MySQL dengan kredensial: username root, password VDkt52xIv7RMuN5u
+- Database MySQL dengan kredensial: username root, password 
 
 ### 1.3 Definisi, Akronim, dan Singkatan
 - **DAD:** Data Architecture Document
@@ -55,7 +55,7 @@ Arsitektur data dirancang untuk mendukung sistem klarifikasi dan komunikasi pend
 - Konsistensi data lintas modul aplikasi
 - Privasi dan keamanan data pendidikan
 - Integrasi dengan sistem eksternal pendidikan
-- Penggunaan database MySQL dengan kredensial: username root, password VDkt52xIv7RMuN5u
+- Penggunaan database MySQL dengan kredensial: username root, password 
 
 ### 2.2 Prinsip Arsitektur Data (Data Architecture Principles)
 1. **Data sebagai Aset:** Perlakukan data sebagai aset strategis organisasi
@@ -82,7 +82,7 @@ graph TB
     end
     
     subgraph "Data Storage Layer"
-        G[MySQL Database<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        G[MySQL Database<br/>User: root<br/>Pass:]
         H[File Storage]
         I[Cache Layer]
     end
@@ -163,7 +163,7 @@ graph TB
 - **Frekuensi Pembaruan:** Real-time
 
 ### 3.2 Sumber Data Internal (Internal Data Sources)
-- **Database Operasional:** MySQL dengan kredensial: username root, password VDkt52xIv7RMuN5u
+- **Database Operasional:** MySQL dengan kredensial: username root, password 
 - **Penyimpanan File:** Sistem penyimpanan objek untuk dokumen pendukung
 - **Cache:** Redis untuk data yang sering diakses
 - **Log Sistem:** Data operasional dan audit
@@ -193,7 +193,7 @@ graph LR
     
     subgraph "Sistem Inti AKKS"
         G[Aplikasi AKKS]
-        H[MySQL Database<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        H[MySQL Database<br/>User: root<br/>Pass:]
         I[Layanan Analitik]
     end
     
@@ -228,7 +228,7 @@ graph LR
 - **Jenis:** Koneksi langsung ke MySQL
 - **Deskripsi:** Integrasi langsung dengan database utama
 - **Protokol:** MySQL Protocol
-- **Kredensial:** Username root, password VDkt52xIv7RMuN5u
+- **Kredensial:** Username root, password 
 - **Frequensi:** Continuous
 
 ### 4.3 Mapping Data (Data Mapping)
@@ -252,7 +252,7 @@ graph LR
 - Tipe data dan batasan
 - Indeks dan kinerja
 - Sejarah perubahan skema
-- Kredensial koneksi: username root, password VDkt52xIv7RMuN5u
+- Kredensial koneksi: username root, password 
 
 #### 5.1.3 Metadata Operasional (Operational Metadata)
 - Waktu pemrosesan data
@@ -301,13 +301,13 @@ Pendidikan Aceh
 - **Tanggung Jawab:** Mengelola kualitas dan integritas data
 - **Peran:** Tim IT Dinas Pendidikan
 - **Akses:** Akses manajemen data
-- **Koneksi Database:** Menggunakan kredensial: username root, password VDkt52xIv7RMuN5u
+- **Koneksi Database:** Menggunakan kredensial: username root, password 
 
 #### 6.1.3 Data Custodian
 - **Tanggung Jawab:** Operasionalisasi sistem data
 - **Peran:** Tim teknis dan pengembangan
 - **Akses:** Akses teknis dan administratif
-- **Koneksi Database:** Menggunakan kredensial: username root, password VDkt52xIv7RMuN5u
+- **Koneksi Database:** Menggunakan kredensial: username root, password 
 
 #### 6.1.4 Data Consumer
 - **Tanggung Jawab:** Menggunakan data sesuai kebijakan
@@ -319,7 +319,7 @@ Pendidikan Aceh
 2. **Kebijakan Kualitas:** Standar kualitas data dan prosedur pemeliharaan
 3. **Kebijakan Keamanan:** Perlindungan data dari akses tidak sah
 4. **Kebijakan Retensi:** Masa simpan data dan prosedur penghapusan
-5. **Kebijakan Koneksi Database:** Penggunaan kredensial: username root, password VDkt52xIv7RMuN5u
+5. **Kebijakan Koneksi Database:** Penggunaan kredensial: username root, password 
 
 ### 6.3 Kualitas Data (Data Quality)
 #### 6.3.1 Dimensi Kualitas
@@ -347,7 +347,7 @@ Pendidikan Aceh
 - **A.14.2 - Security in Development and Support Processes:** Keamanan dalam pengembangan
 
 #### 7.1.2 Perlindungan Database (Database Protection)
-- **Kredensial:** Username: root, Password: VDkt52xIv7RMuN5u
+- **Kredensial:** Username: root, Password: 
 - **Enkripsi Koneksi:** SSL/TLS untuk koneksi ke MySQL
 - **Otorisasi:** Hak akses berbasis peran
 - **Audit:** Logging aktivitas database
@@ -383,7 +383,7 @@ Pendidikan Aceh
 ```mermaid
 graph TD
     A[Data Creation] --> B[Data Validation]
-    B --> C[Data Storage in MySQL<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+    B --> C[Data Storage in MySQL<br/>User: root<br/>Pass: ]
     C --> D[Data Processing]
     D --> E[Data Usage]
     E --> F{Still Valid?}
@@ -429,7 +429,7 @@ graph TD
 - **Audit Trail:** Catatan lengkap perubahan data
 - **Snapshot:** Backup berkala untuk data penting
 - **Recovery Point:** Titik pemulihan data maksimal 1 jam
-- **Database:** Menggunakan MySQL dengan kredensial: username root, password VDkt52xIv7RMuN5u
+- **Database:** Menggunakan MySQL dengan kredensial: username root, password 
 
 ## 9. Diagram Arsitektur Data (Data Architecture Diagrams)
 
@@ -458,7 +458,7 @@ graph TB
     end
     
     subgraph "Data Storage Layer"
-        L[MySQL Database<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        L[MySQL Database<br/>User: root<br/>Pass: ]
         M[File Storage]
         N[Cache Layer]
         O[Search Index]
@@ -496,7 +496,7 @@ graph LR
     subgraph "Lingkungan Produksi AKKS"
         A[Load Balancer]
         B[Application Server]
-        C[MySQL Primary<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+        C[MySQL Primary<br/>User: root<br/>Pass: ]
         D[MySQL Replica]
         E[File Storage]
     end
@@ -532,7 +532,7 @@ graph LR
 ```mermaid
 flowchart LR
     A[Pengguna Sekolah Membuat Permintaan Klarifikasi] --> B[Validasi Data Klarifikasi]
-    B --> C[Simpan ke Database MySQL<br/>User: root<br/>Pass: VDkt52xIv7RMuN5u]
+    B --> C[Simpan ke Database MySQL<br/>User: root<br/>Pass: ]
     C --> D[Pemicu Workflow Klarifikasi]
     D --> E[Update Cache]
     E --> F[Kirim Notifikasi ke Admin]
@@ -553,7 +553,7 @@ flowchart LR
 ## 10. Rencana Implementasi (Implementation Plan)
 
 ### 10.1 Tahapan Implementasi (Implementation Phases)
-1. **Fase 1:** Persiapan infrastruktur dan skema dasar MySQL (Kredensial: root/VDkt52xIv7RMuN5u)
+1. **Fase 1:** Persiapan infrastruktur dan skema dasar MySQL (Kredensial: root/)
 2. **Fase 2:** Implementasi layanan inti (otentikasi, pengguna)
 3. **Fase 3:** Implementasi modul sekolah dan data induk
 4. **Fase 4:** Implementasi modul klarifikasi dan komunikasi
@@ -563,7 +563,7 @@ flowchart LR
 ### 10.2 Kriteria Sukses (Success Criteria)
 - Ketersediaan data 99.9%
 - Waktu respons database MySQL < 500ms
-- Keamanan data terjamin (kredensial: root/VDkt52xIv7RMuN5u)
+- Keamanan data terjamin (kredensial: root/)
 - Kepatuhan terhadap regulasi
 - Skalabilitas untuk 10.000+ pengguna
 - Integrasi lancar dengan sistem eksternal
@@ -576,7 +576,7 @@ flowchart LR
 - Panduan migrasi data
 - Prosedur pemulihan bencana
 - Template dokumentasi data
-- Konfigurasi database: Host=localhost, Port=3306, User=root, Password=VDkt52xIv7RMuN5u
+- Konfigurasi database: Host=localhost, Port=3306, User=root, Password=
 
 ## Ringkasan Standar ISO/IEEE dan Tujuan
 
